@@ -13,6 +13,14 @@ body {
   color: #fff;
 }
 
+::-moz-selection {
+  background: #4D519F;
+}
+
+::selection {
+  background: #4D519F;
+}
+
 a {
   text-decoration: none;
   color: inherit;

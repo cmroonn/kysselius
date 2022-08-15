@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "Khmer MN";
+  src: url("../fonts/khmer-mn.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
 body {
   padding: 0;
   margin: 0;
@@ -192,6 +198,8 @@ div, section, article, main, input, span {
 .section-title {
   font-size: 48px;
   position: relative;
+  font-family: "Khmer MN", sans-serif;
+  font-weight: 400;
 }
 
 .services {

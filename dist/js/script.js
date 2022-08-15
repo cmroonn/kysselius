@@ -12,9 +12,9 @@ document.addEventListener("DOMContentLoaded", function () {
     duration: 250
   }).setPin('.services-decor').addTo(scrollController);
   var contactScene = new ScrollMagic.Scene({
-    triggerElement: '.unique',
-    duration: 450,
-    offset: 250
+    triggerElement: '.contact',
+    duration: 350,
+    offset: 0
   }).setPin('.contact-decor').addTo(scrollController);
   var welcomeDot = new ScrollMagic.Scene({
     triggerElement: '.main'

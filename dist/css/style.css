@@ -208,6 +208,12 @@ div, section, article, main, input, span {
   position: relative;
   font-family: "Khmer MN", sans-serif;
   font-weight: 400;
+  line-height: 1;
+}
+@media (max-width: 500px) {
+  .section-title {
+    max-width: 300px;
+  }
 }
 
 .services {
@@ -223,6 +229,8 @@ div, section, article, main, input, span {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
+  position: relative;
+  z-index: 2;
 }
 @media (max-width: 992px) {
   .services__grid {
@@ -240,6 +248,11 @@ div, section, article, main, input, span {
   background-repeat: no-repeat;
   position: relative;
   overflow: hidden;
+  border-radius: 2px;
+  cursor: pointer;
+  -webkit-transition: 0.05s ease;
+  -o-transition: 0.05s ease;
+  transition: 0.05s ease;
 }
 .services__grid__item svg {
   position: absolute;
@@ -250,15 +263,19 @@ div, section, article, main, input, span {
   content: "";
   width: 60px;
   height: 60px;
-  background-image: url("../images/triangle.png");
+  background-image: url("../images/corner.svg");
   background-size: cover;
   background-repeat: no-repeat;
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: -1px;
+  -webkit-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
+  transition: 0.4s ease;
 }
 .services__grid__item::after {
   content: "";
+  display: none;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -273,20 +290,25 @@ div, section, article, main, input, span {
   border-radius: 50%;
   height: 0;
 }
-.services__grid__item:hover::after {
+.services__grid__item:hover {
+  font-size: 1.3em;
+  -webkit-transition: 0.1s ease;
+  -o-transition: 0.1s ease;
+  transition: 0.1s ease;
+}
+.services__grid__item:hover::before {
   -webkit-transition: 0.5s ease;
   -o-transition: 0.5s ease;
   transition: 0.5s ease;
-  right: -500px;
-  bottom: -500px;
   width: 1000px;
   height: 1000px;
+  right: -10px;
 }
 .services__grid__item:hover .services__grid__item__title {
   color: #000;
-  -webkit-transition: 0.65s ease-in;
-  -o-transition: 0.65s ease-in;
-  transition: 0.65s ease-in;
+  -webkit-transition: color 0.65s ease-in;
+  -o-transition: color 0.65s ease-in;
+  transition: color 0.65s ease-in;
 }
 .services__grid__item-1 {
   background-image: url("../images/service-1.jpeg");
@@ -329,14 +351,16 @@ div, section, article, main, input, span {
     grid-column-end: unset;
   }
 }
-.services__grid__item-double-end:hover:after, .services__grid__item-double-start:hover:after {
-  width: 1500px;
-  height: 1500px;
-  right: -650px;
-  bottom: -650px;
+.services__grid__item-double-end:hover, .services__grid__item-double-start:hover {
+  font-size: 3em;
+  -webkit-transition: 0.1s ease;
+  -o-transition: 0.1s ease;
+  transition: 0.1s ease;
 }
-.services__grid__item-big {
-  font-size: 4em;
+.services__grid__item-double-end:hover:before, .services__grid__item-double-start:hover:before {
+  width: 1600px;
+  height: 1600px;
+  right: -50px;
 }
 @media (max-width: 992px) {
   .services__grid__item {
@@ -347,11 +371,10 @@ div, section, article, main, input, span {
     grid-column-end: 3;
     font-size: 24px;
   }
-  .services__grid__item:hover:after {
+  .services__grid__item:hover:before {
     width: 1500px;
     height: 1500px;
-    right: -650px;
-    bottom: -650px;
+    right: -50px;
   }
 }
 @media (max-width: 530px) {
@@ -395,7 +418,7 @@ div, section, article, main, input, span {
 .unique-decor {
   position: absolute;
   pointer-events: none;
-  bottom: 150px;
+  bottom: 400px;
   left: -100px;
 }
 @media (max-width: 500px) {
@@ -460,9 +483,10 @@ div, section, article, main, input, span {
 
 .contact-decor {
   position: absolute;
-  top: -500px;
+  top: -600px;
   right: -130px;
   pointer-events: none;
+  opacity: 1;
 }
 @media (max-width: 500px) {
   .contact-decor {

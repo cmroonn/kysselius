@@ -227,6 +227,7 @@ div, section, article, main, input, span {
 
 .services__grid {
   display: grid;
+  display: -ms-grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
   position: relative;

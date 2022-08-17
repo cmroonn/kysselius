@@ -408,9 +408,9 @@ div, section, article, main, input, span {
 }
 .services__grid__item-double-end:hover, .services__grid__item-double-start:hover {
   font-size: 3em;
-  -webkit-transition: 0.1s ease;
-  -o-transition: 0.1s ease;
-  transition: 0.1s ease;
+  -webkit-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 .services__grid__item-double-end:hover:before, .services__grid__item-double-start:hover:before {
   width: 1600px;

@@ -63,6 +63,25 @@ div, section, article, main, input, span {
 
 .header__cta {
   font-size: 1em;
+  position: relative;
+}
+.header__cta::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 1.5px;
+  background-color: #fff;
+  -webkit-transition: width 0.35s;
+  -o-transition: width 0.35s;
+  transition: width 0.35s;
+}
+.header__cta:hover:before {
+  width: 100%;
+  -webkit-transition: width 0.35s;
+  -o-transition: width 0.35s;
+  transition: width 0.35s;
 }
 @media (max-width: 425px) {
   .header__cta {
@@ -293,9 +312,9 @@ div, section, article, main, input, span {
 }
 .services__grid__item:hover {
   font-size: 1.3em;
-  -webkit-transition: 0.1s ease;
-  -o-transition: 0.1s ease;
-  transition: 0.1s ease;
+  -webkit-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 .services__grid__item:hover::before {
   -webkit-transition: 0.5s ease;
@@ -438,7 +457,7 @@ div, section, article, main, input, span {
 
 .services-decor {
   position: absolute;
-  top: -140px;
+  top: -315px;
   right: -160px;
 }
 
